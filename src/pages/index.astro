@@ -1,6 +1,9 @@
 ---
-
+import { Image } from "astro:assets";
+import gong_logo from '../images/gong-logo.png';
+import gong_orpheus from '../images/gong-orpheus.png';
 ---
+
 
 <html lang="en">
 	<head>
@@ -9,9 +12,100 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Carter+One&display=swap" rel="stylesheet">
+
+		<title>Throwback</title>
+
+		<style>
+			body {
+				background-color: #a18670;
+				font-family: 'Bungee';
+				text-align: center;
+				
+			}
+
+			.grow {
+  				transition: all 0.2s ease-in-out;
+				}		
+
+			span {
+				padding-right: 10%;
+				transition: 0.3s ease;
+			}
+
+			span:hover {
+				transform: scale(1.2);
+			}
+
+			h1 {
+
+			}
+
+			h2 {
+				font-size: large;
+
+			}
+
+			h3 {
+				font-size: 20;
+
+			}
+
+			h4 {
+				text-align: left;
+			}
+			
+			
+			a {
+				color:#3161e3;
+				transition: font-size 0.3s ease;
+			}
+			a:hover {
+				color:#2e519e;
+				font-size: 120%;
+				
+			}
+
+
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+	
+		
+	<Image src={gong_logo} width="374" alt="gong logo" class="center" layout="constrained"/>
+        <h1>Ship an hour, we hit a gong at HQ!</h1>
+
+		<br>
+		
+
+		<span style="display:block; float: right; margin-bottom: 1em; width: 250px; height: 200px;">
+			<Image src={gong_orpheus} width="300" alt="orph with gong"/>
+		</span>
+
+
+		<h4>
+		<h1><a href="https://forms.hackclub.com/t/hEPJkPcp9Zus" target="_blank">SHIP SHIP SHIP!</a></h1>
+		<h3>Closes midnight EDT, September 24th</h3>
+
+		
+		<br>
+
+		<h3>But wait... how do we know you're gonging it?</h3>
+
+		<h1><a href="https://www.youtube.com/@hackclub-gong" target="_blank">WATCH THE GONG STREAM!</a></h1>
+
+		<h3>Mondays, Tuesdays + Fridays @ 7pm eastern time</h3>
+
+	
+		<br>
+
+		<h2>
+			<a href="https://hackclub.com" target="_blank">A Hack Club program by ren ♡</a>
+		</h2>
+		
+		</h4>
+	
 	</body>
 </html>
